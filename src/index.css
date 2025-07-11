@@ -4,71 +4,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* PETLAB Diagnostic Hub Design System */
+/* PETLAB Pet Care Design System - Purple/Pink Theme */
 @layer base {
   :root {
-    /* PETLAB Brand Colors - Blue Based Medical Theme */
-    --primary: 213 100% 64%;        /* #2563eb - Professional Blue */
-    --primary-dark: 218 91% 40%;    /* #1e40af - Darker Blue */
-    --primary-light: 214 95% 93%;   /* #dbeafe - Light Blue */
+    /* Primary Purple Theme */
+    --primary: 280 89% 60%;          /* #a855f7 - Purple */
+    --primary-dark: 280 89% 48%;     /* #8b5cf6 - Darker Purple */
+    --primary-light: 280 100% 97%;   /* #faf5ff - Light Purple */
+    --primary-gradient: linear-gradient(135deg, #a855f7, #c084fc);
     
-    --secondary-green: 142 71% 45%; /* #16a34a - Success/Health Green */
-    --secondary-light-green: 142 76% 94%; /* #dcfce7 */
-    --secondary-orange: 20 91% 48%; /* #ea580c - Warning Orange */
-    --secondary-light-orange: 24 95% 86%; /* #fed7aa */
+    /* Secondary Pink/Rose */
+    --secondary: 330 81% 60%;        /* #ec4899 - Pink */
+    --secondary-dark: 330 81% 48%;   /* #db2777 - Darker Pink */
+    --secondary-light: 330 100% 97%; /* #fdf2f8 - Light Pink */
     
-    /* Neutral Grays */
-    --neutral-50: 210 20% 98%;      /* #f9fafb */
-    --neutral-100: 220 14% 96%;     /* #f3f4f6 */
-    --neutral-200: 220 13% 91%;     /* #e5e7eb */
-    --neutral-300: 216 12% 84%;     /* #d1d5db */
-    --neutral-400: 218 11% 65%;     /* #9ca3af */
-    --neutral-500: 220 9% 46%;      /* #6b7280 */
-    --neutral-600: 218 11% 32%;     /* #4b5563 */
-    --neutral-700: 217 19% 27%;     /* #374151 */
-    --neutral-800: 215 28% 17%;     /* #1f2937 */
-    --neutral-900: 222 47% 11%;     /* #111827 */
+    /* Accent Colors */
+    --accent-blue: 217 91% 60%;      /* #3b82f6 - Blue accent */
+    --accent-blue-light: 217 100% 97%; /* #eff6ff */
+    --accent-green: 142 71% 45%;     /* #10b981 - Green accent */
+    --accent-green-light: 142 76% 94%; /* #dcfce7 */
+    --accent-orange: 24 95% 53%;     /* #f97316 - Orange accent */
+    --accent-orange-light: 24 95% 93%; /* #fff7ed */
+    
+    /* Neutral Grays - Softer palette */
+    --neutral-50: 280 20% 99%;       /* #fefbff */
+    --neutral-100: 280 14% 97%;      /* #faf8fc */
+    --neutral-200: 280 13% 94%;      /* #f1eef6 */
+    --neutral-300: 280 12% 87%;      /* #ddd6e8 */
+    --neutral-400: 280 11% 68%;      /* #a599b8 */
+    --neutral-500: 280 9% 49%;       /* #726284 */
+    --neutral-600: 280 11% 35%;      /* #574a67 */
+    --neutral-700: 280 19% 29%;      /* #463954 */
+    --neutral-800: 280 28% 20%;      /* #342940 */
+    --neutral-900: 280 47% 13%;      /* #251c2e */
     
     /* Functional Colors */
-    --error: 0 84% 60%;             /* #dc2626 */
-    --warning: 25 95% 53%;          /* #d97706 */
-    --success: 160 84% 39%;         /* #059669 */
-    --info: 199 89% 48%;            /* #0284c7 */
+    --error: 0 84% 60%;              /* #dc2626 */
+    --warning: 25 95% 53%;           /* #d97706 */
+    --success: 160 84% 39%;          /* #059669 */
+    --info: 199 89% 48%;             /* #0284c7 */
     
-    /* Specialized Service Colors */
-    --prescription-red: 0 84% 60%;   /* #dc2626 */
-    --prescription-light: 0 86% 97%; /* #fef2f2 */
-    --supplements-purple: 251 91% 56%; /* #7c3aed */
-    --supplements-light: 270 100% 97%; /* #f3e8ff */
-    --skin-care-cyan: 188 94% 42%;   /* #0891b2 */
-    --skin-care-light: 187 85% 94%;  /* #cffafe */
-    --eye-care-pink: 347 89% 50%;    /* #e11d48 */
-    --eye-care-light: 322 85% 96%;   /* #fdf2f8 */
+    /* Service Category Colors - Themed */
+    --service-purple: 280 89% 60%;    /* #a855f7 */
+    --service-purple-light: 280 100% 97%; /* #faf5ff */
+    --service-pink: 330 81% 60%;      /* #ec4899 */
+    --service-pink-light: 330 100% 97%; /* #fdf2f8 */
+    --service-blue: 217 91% 60%;      /* #3b82f6 */
+    --service-blue-light: 217 100% 97%; /* #eff6ff */
+    --service-green: 142 71% 45%;     /* #10b981 */
+    --service-green-light: 142 76% 94%; /* #dcfce7 */
+    --service-orange: 24 95% 53%;     /* #f97316 */
+    --service-orange-light: 24 95% 93%; /* #fff7ed */
     
     /* Design System Tokens */
     --background: 0 0% 100%;         /* Pure white */
-    --foreground: 222 47% 11%;       /* Dark text */
+    --foreground: 280 47% 13%;       /* Dark purple text */
     --card: 0 0% 100%;               /* White cards */
-    --card-foreground: 222 47% 11%;  /* Dark text on cards */
-    --border: 220 13% 91%;           /* Light gray borders */
-    --input: 220 13% 91%;            /* Input borders */
-    --ring: 213 100% 64%;            /* Focus rings */
-    --muted: 210 20% 98%;            /* Muted backgrounds */
-    --muted-foreground: 220 9% 46%;  /* Muted text */
-    --accent: 214 95% 93%;           /* Accent backgrounds */
-    --accent-foreground: 213 100% 64%; /* Accent text */
+    --card-foreground: 280 47% 13%;  /* Dark purple text on cards */
+    --border: 280 13% 94%;           /* Light purple borders */
+    --input: 280 13% 94%;            /* Input borders */
+    --ring: 280 89% 60%;             /* Purple focus rings */
+    --muted: 280 20% 99%;            /* Muted purple backgrounds */
+    --muted-foreground: 280 9% 49%;  /* Muted purple text */
+    --accent: 280 100% 97%;          /* Light purple accent */
+    --accent-foreground: 280 89% 60%; /* Purple accent text */
     
-    /* Shadows for depth */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-base: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
+    /* Shadows for depth with purple tint */
+    --shadow-sm: 0 1px 2px 0 hsl(280 20% 50% / 0.05);
+    --shadow-base: 0 1px 3px 0 hsl(280 20% 50% / 0.1), 0 1px 2px 0 hsl(280 20% 50% / 0.06);
+    --shadow-md: 0 4px 6px -1px hsl(280 20% 50% / 0.1), 0 2px 4px -1px hsl(280 20% 50% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(280 20% 50% / 0.1), 0 4px 6px -2px hsl(280 20% 50% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(280 20% 50% / 0.1), 0 10px 10px -5px hsl(280 20% 50% / 0.04);
+    --shadow-glow: 0 0 40px hsl(280 89% 60% / 0.15);
     
     /* Smooth transitions */
-    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
-    --radius: 0.75rem;  /* Rounded corners */
+    --radius: 1rem;  /* More rounded corners */
   }
 
   .dark {
@@ -121,54 +133,108 @@
 }
 
 @layer components {
-  /* PETLAB Service Card Styles */
+  /* Pet Care Service Card Styles */
   .service-card {
-    @apply bg-card border border-border rounded-xl p-6 transition-all duration-200 ease-in-out;
+    @apply bg-card border border-border rounded-2xl p-8 transition-all duration-300 ease-in-out relative overflow-hidden;
     box-shadow: var(--shadow-md);
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.02), hsl(var(--secondary) / 0.02));
+    pointer-events: none;
   }
   
   .service-card:hover {
-    @apply -translate-y-1 border-primary/50;
-    box-shadow: var(--shadow-lg);
+    @apply -translate-y-2 border-primary/30;
+    box-shadow: var(--shadow-xl), var(--shadow-glow);
   }
   
   .service-icon {
-    @apply w-16 h-16 rounded-xl flex items-center justify-center mb-4;
-  }
-  
-  /* Medical Service Specific Colors */
-  .hematology { @apply bg-prescription-light text-prescription-red; }
-  .biochemistry { @apply bg-primary-light text-primary; }
-  .urine-clinical { @apply bg-secondary-light-green text-secondary-green; }
-  .kit-based { @apply bg-secondary-light-orange text-secondary-orange; }
-  .serology { @apply bg-supplements-light text-supplements-purple; }
-  .cytology { @apply bg-skin-care-light text-skin-care-cyan; }
-  .microbiology { @apply bg-eye-care-light text-eye-care-pink; }
-  .hormone { @apply bg-neutral-100 text-neutral-700; }
-  .xray { @apply bg-neutral-200 text-neutral-800; }
-  .pathology { @apply bg-info/10 text-info; }
-  
-  /* Professional Button Styles */
-  .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium transition-all duration-200;
+    @apply w-20 h-20 rounded-2xl flex items-center justify-center mb-6 relative z-10;
     box-shadow: var(--shadow-base);
   }
   
+  /* Pet Care Service Specific Colors */
+  .hematology { @apply bg-service-pink-light text-service-pink; }
+  .biochemistry { @apply bg-service-purple-light text-service-purple; }
+  .urine-clinical { @apply bg-service-green-light text-service-green; }
+  .kit-based { @apply bg-service-orange-light text-service-orange; }
+  .serology { @apply bg-service-blue-light text-service-blue; }
+  .cytology { @apply bg-service-pink-light text-service-pink; }
+  .microbiology { @apply bg-service-purple-light text-service-purple; }
+  .hormone { @apply bg-service-green-light text-service-green; }
+  .xray { @apply bg-service-orange-light text-service-orange; }
+  .pathology { @apply bg-service-blue-light text-service-blue; }
+  
+  /* Pet Care Button Styles */
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 relative overflow-hidden;
+    background: var(--primary-gradient);
+    box-shadow: var(--shadow-base);
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+  
   .btn-primary:hover {
-    @apply bg-primary-dark -translate-y-0.5;
-    box-shadow: var(--shadow-md);
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
   }
   
   .btn-secondary {
-    @apply bg-white text-neutral-700 border border-border px-6 py-3 rounded-lg font-medium transition-all duration-200;
+    @apply bg-white text-neutral-700 border-2 border-primary/20 px-8 py-4 rounded-2xl font-semibold transition-all duration-300;
   }
   
   .btn-secondary:hover {
-    @apply bg-neutral-50 border-neutral-300;
+    @apply bg-primary/5 border-primary/30 -translate-y-0.5;
   }
   
-  /* Professional Header */
+  /* Pet Care Header */
   .header-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    background: var(--primary-gradient);
+  }
+  
+  /* Decorative Elements */
+  .pet-frame {
+    @apply relative rounded-3xl overflow-hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .pet-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 3px solid hsl(var(--primary) / 0.2);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  
+  .sparkle {
+    @apply absolute animate-pulse;
+    color: hsl(var(--primary));
+  }
+  
+  .connecting-line {
+    @apply absolute;
+    background: linear-gradient(90deg, hsl(var(--primary) / 0.3), hsl(var(--secondary) / 0.3));
+    height: 2px;
   }
 }

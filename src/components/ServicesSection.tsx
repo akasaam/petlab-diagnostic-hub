@@ -1,151 +1,166 @@
 import { 
-  Microscope, 
-  Droplets, 
+  Heart, 
+  Stethoscope, 
   TestTube, 
   Activity, 
   Shield, 
   Eye, 
   Bug, 
   Pill,
-  Stethoscope,
-  FileText
+  Camera,
+  FileText,
+  Star,
+  Sparkles
 } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
     {
-      title: "Hematology",
-      description: "Complete blood count, blood cell analysis, and coagulation studies for accurate diagnosis.",
-      icon: Droplets,
+      title: "Dog Pet Visit",
+      description: "Complete health checkups and diagnostic services for dogs of all breeds and ages.",
+      icon: Heart,
       className: "hematology",
-      tests: ["CBC", "Blood Smear", "Coagulation Tests"]
+      price: "$49 USD",
+      features: ["Health Checkup", "Vaccination", "Grooming"]
     },
     {
-      title: "Biochemistry",
-      description: "Comprehensive metabolic panels, organ function tests, and chemical analysis.",
-      icon: TestTube,
-      className: "biochemistry", 
-      tests: ["Liver Function", "Kidney Function", "Electrolytes"]
+      title: "Cat Pet Visit", 
+      description: "Specialized feline care with comprehensive diagnostic and wellness services.",
+      icon: Stethoscope,
+      className: "biochemistry",
+      price: "$39 USD", 
+      features: ["Feline Care", "Health Screening", "Dental Care"]
     },
     {
-      title: "Urine & Clinical Pathology",
-      description: "Urinalysis, body fluid analysis, and clinical pathology investigations.",
-      icon: Activity,
+      title: "Pet Bath",
+      description: "Professional grooming and bathing services for your beloved pets.",
+      icon: Sparkles,
       className: "urine-clinical",
-      tests: ["Urinalysis", "Body Fluids", "Clinical Chemistry"]
+      price: "$25 USD",
+      features: ["Professional Bath", "Nail Trimming", "Ear Cleaning"]
     },
     {
-      title: "Kit Based Tests",
-      description: "Rapid diagnostic tests for quick and accurate point-of-care testing.",
-      icon: Shield,
+      title: "Pet Grooming",
+      description: "Complete grooming services including styling, nail care, and hygiene maintenance.",
+      icon: Star,
       className: "kit-based",
-      tests: ["Rapid Tests", "ELISA", "Immunoassays"]
+      price: "$35 USD",
+      features: ["Full Grooming", "Styling", "Health Check"]
     },
     {
-      title: "Serology",
-      description: "Antibody testing, disease screening, and immunological assessments.",
-      icon: Shield,
+      title: "Laboratory Tests",
+      description: "Advanced diagnostic testing including blood work, urine analysis, and more.",
+      icon: TestTube,
       className: "serology",
-      tests: ["Antibody Tests", "Disease Screening", "Immunity Check"]
-    },
-    {
-      title: "Cytology & Histopathology",
-      description: "Cellular examination, tissue analysis, and cancer screening services.",
-      icon: Microscope,
-      className: "cytology",
-      tests: ["Cell Analysis", "Tissue Biopsy", "Cancer Screening"]
-    },
-    {
-      title: "Microbiology",
-      description: "Bacterial culture, sensitivity testing, and antimicrobial resistance analysis.",
-      icon: Bug,
-      className: "microbiology",
-      tests: ["Culture", "Sensitivity", "Resistance Testing"]
-    },
-    {
-      title: "Hormone Analysis",
-      description: "Endocrine function testing, reproductive hormones, and metabolic assessments.",
-      icon: Pill,
-      className: "hormone",
-      tests: ["Thyroid", "Reproductive", "Stress Hormones"]
+      price: "Varies",
+      features: ["Blood Tests", "Urine Analysis", "Pathology"]
     },
     {
       title: "X-Ray Imaging",
-      description: "Digital radiography for bone, chest, and abdominal imaging with instant results.",
-      icon: Eye,
-      className: "xray",
-      tests: ["Bone X-rays", "Chest Imaging", "Abdominal Scans"]
+      description: "Digital radiography for accurate diagnosis of internal conditions.",
+      icon: Camera,
+      className: "cytology",
+      price: "Varies", 
+      features: ["Digital X-Ray", "Bone Imaging", "Internal Scans"]
     },
     {
-      title: "Ultrasonography (USG)",
-      description: "Advanced ultrasound imaging for internal organ examination and pregnancy monitoring.",
-      icon: Stethoscope,
-      className: "pathology",
-      tests: ["Organ Imaging", "Pregnancy Scan", "Heart Echo"]
+      title: "Emergency Care",
+      description: "24/7 emergency veterinary services for urgent pet health situations.",
+      icon: Activity,
+      className: "microbiology",
+      price: "Call",
+      features: ["24/7 Service", "Emergency Response", "Critical Care"]
+    },
+    {
+      title: "Wellness Programs",
+      description: "Preventive care programs to keep your pets healthy year-round.",
+      icon: Shield,
+      className: "hormone",
+      price: "Varies",
+      features: ["Preventive Care", "Wellness Plans", "Health Monitoring"]
     }
   ];
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-neutral-50">
+    <section id="services" className="py-20 lg:py-32 bg-gradient-to-br from-neutral-50 to-primary-light relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-20 right-10 w-6 h-6">
+        <Star className="w-full h-full text-primary/30 animate-pulse" />
+      </div>
+      <div className="absolute bottom-32 left-16 w-5 h-5">
+        <Sparkles className="w-full h-full text-secondary/30 animate-pulse" style={{ animationDelay: '0.5s' }} />
+      </div>
+      
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-primary-light text-primary rounded-full text-sm font-medium mb-6">
-            <FileText className="w-4 h-4 mr-2" />
-            Complete Diagnostic Solutions
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full text-sm font-semibold mb-8 border border-primary/20">
+            <FileText className="w-5 h-5 mr-2" />
+            Our Services
           </div>
-          <h2 className="text-3xl lg:text-5xl font-bold text-neutral-900 mb-6">
-            Our Specialized Services
+          <h2 className="text-4xl lg:text-6xl font-bold text-neutral-900 mb-8">
+            Comprehensive Pet Care
+            <br />
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Services
+            </span>
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Comprehensive veterinary diagnostic services for over 13 animal species including 
-            dogs, cats, cows, horses, and more with same-day reporting.
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+            Professional veterinary diagnostic services for over 13 animal species including 
+            dogs, cats, cows, horses, and more with same-day reporting and expert care.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className="service-card animate-fade-in"
+              className="service-card group animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`service-icon ${service.className}`}>
-                <service.icon className="w-8 h-8" />
+              <div className={`service-icon ${service.className} group-hover:scale-110 transition-transform duration-300`}>
+                <service.icon className="w-10 h-10" />
               </div>
               
-              <h3 className="text-xl font-semibold text-neutral-900 mb-3">
+              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:text-primary transition-colors duration-300">
                 {service.title}
               </h3>
               
-              <p className="text-neutral-600 mb-4 leading-relaxed">
+              <p className="text-neutral-600 mb-6 leading-relaxed text-sm">
                 {service.description}
               </p>
               
-              <div className="space-y-2">
-                <h4 className="text-sm font-medium text-neutral-700 mb-2">Key Tests:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.tests.map((test) => (
-                    <span 
-                      key={test}
-                      className="px-3 py-1 bg-neutral-100 text-neutral-700 text-xs rounded-full"
-                    >
-                      {test}
-                    </span>
-                  ))}
-                </div>
+              <div className="space-y-3 mb-6">
+                {service.features.map((feature) => (
+                  <div key={feature} className="flex items-center space-x-2">
+                    <Heart className="w-3 h-3 text-primary flex-shrink-0" />
+                    <span className="text-xs text-neutral-600">{feature}</span>
+                  </div>
+                ))}
               </div>
               
-              <button className="mt-6 w-full bg-neutral-100 hover:bg-neutral-200 text-neutral-700 py-2 px-4 rounded-lg transition-colors text-sm font-medium">
-                Learn More
-              </button>
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-neutral-200">
+                <span className="text-lg font-bold text-primary">{service.price}</span>
+                <button className="text-sm font-semibold text-primary hover:text-primary-dark transition-colors duration-300">
+                  Learn More →
+                </button>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <button className="btn-primary">
-            Download Complete Test List
-          </button>
+        <div className="text-center">
+          <p className="text-neutral-600 mb-8 text-lg">
+            Looking for something specific? We offer specialized diagnostics for your unique needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="btn-primary flex items-center justify-center space-x-2">
+              <Heart className="w-5 h-5" />
+              <span>Book Consultation</span>
+            </button>
+            <button className="btn-secondary">
+              View All Services
+            </button>
+          </div>
         </div>
       </div>
     </section>

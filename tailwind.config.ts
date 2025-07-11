@@ -35,11 +35,19 @@ export default {
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))',
-					green: 'hsl(var(--secondary-green))',
-					'light-green': 'hsl(var(--secondary-light-green))',
-					orange: 'hsl(var(--secondary-orange))',
-					'light-orange': 'hsl(var(--secondary-light-orange))'
+					dark: 'hsl(var(--secondary-dark))',
+					light: 'hsl(var(--secondary-light))',
+					foreground: 'hsl(var(--secondary-foreground))'
+				},
+				accent: {
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))',
+					blue: 'hsl(var(--accent-blue))',
+					'blue-light': 'hsl(var(--accent-blue-light))',
+					green: 'hsl(var(--accent-green))',
+					'green-light': 'hsl(var(--accent-green-light))',
+					orange: 'hsl(var(--accent-orange))',
+					'orange-light': 'hsl(var(--accent-orange-light))'
 				},
 				neutral: {
 					50: 'hsl(var(--neutral-50))',
@@ -53,14 +61,16 @@ export default {
 					800: 'hsl(var(--neutral-800))',
 					900: 'hsl(var(--neutral-900))'
 				},
-				'prescription-red': 'hsl(var(--prescription-red))',
-				'prescription-light': 'hsl(var(--prescription-light))',
-				'supplements-purple': 'hsl(var(--supplements-purple))',
-				'supplements-light': 'hsl(var(--supplements-light))',
-				'skin-care-cyan': 'hsl(var(--skin-care-cyan))',
-				'skin-care-light': 'hsl(var(--skin-care-light))',
-				'eye-care-pink': 'hsl(var(--eye-care-pink))',
-				'eye-care-light': 'hsl(var(--eye-care-light))',
+				'service-purple': 'hsl(var(--service-purple))',
+				'service-purple-light': 'hsl(var(--service-purple-light))',
+				'service-pink': 'hsl(var(--service-pink))',
+				'service-pink-light': 'hsl(var(--service-pink-light))',
+				'service-blue': 'hsl(var(--service-blue))',
+				'service-blue-light': 'hsl(var(--service-blue-light))',
+				'service-green': 'hsl(var(--service-green))',
+				'service-green-light': 'hsl(var(--service-green-light))',
+				'service-orange': 'hsl(var(--service-orange))',
+				'service-orange-light': 'hsl(var(--service-orange-light))',
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
