@@ -4,19 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* PETLAB Pet Care Design System - Purple/Pink Theme */
+/* PETLAB Pet Care Design System - Yellow/Black Theme */
 @layer base {
   :root {
-    /* Primary Purple Theme */
-    --primary: 280 89% 60%;          /* #a855f7 - Purple */
-    --primary-dark: 280 89% 48%;     /* #8b5cf6 - Darker Purple */
-    --primary-light: 280 100% 97%;   /* #faf5ff - Light Purple */
-    --primary-gradient: linear-gradient(135deg, #a855f7, #c084fc);
+    /* Primary Yellow Theme */
+    --primary: 48 100% 67%;          /* #fbbf24 - Yellow */
+    --primary-dark: 45 93% 47%;      /* #d97706 - Darker Yellow */
+    --primary-light: 48 100% 96%;    /* #fffbeb - Light Yellow */
+    --primary-gradient: linear-gradient(135deg, #fbbf24, #f59e0b);
     
-    /* Secondary Pink/Rose */
-    --secondary: 330 81% 60%;        /* #ec4899 - Pink */
-    --secondary-dark: 330 81% 48%;   /* #db2777 - Darker Pink */
-    --secondary-light: 330 100% 97%; /* #fdf2f8 - Light Pink */
+    /* Secondary Black/Gray */
+    --secondary: 0 0% 9%;            /* #171717 - Near Black */
+    --secondary-dark: 0 0% 4%;       /* #0a0a0a - Darker Black */
+    --secondary-light: 0 0% 96%;     /* #f5f5f5 - Light Gray */
     
     /* Accent Colors */
     --accent-blue: 217 91% 60%;      /* #3b82f6 - Blue accent */
@@ -26,17 +26,17 @@
     --accent-orange: 24 95% 53%;     /* #f97316 - Orange accent */
     --accent-orange-light: 24 95% 93%; /* #fff7ed */
     
-    /* Neutral Grays - Softer palette */
-    --neutral-50: 280 20% 99%;       /* #fefbff */
-    --neutral-100: 280 14% 97%;      /* #faf8fc */
-    --neutral-200: 280 13% 94%;      /* #f1eef6 */
-    --neutral-300: 280 12% 87%;      /* #ddd6e8 */
-    --neutral-400: 280 11% 68%;      /* #a599b8 */
-    --neutral-500: 280 9% 49%;       /* #726284 */
-    --neutral-600: 280 11% 35%;      /* #574a67 */
-    --neutral-700: 280 19% 29%;      /* #463954 */
-    --neutral-800: 280 28% 20%;      /* #342940 */
-    --neutral-900: 280 47% 13%;      /* #251c2e */
+    /* Neutral Grays - Black/Gray palette */
+    --neutral-50: 0 0% 98%;          /* #fafafa */
+    --neutral-100: 0 0% 96%;         /* #f5f5f5 */
+    --neutral-200: 0 0% 90%;         /* #e5e5e5 */
+    --neutral-300: 0 0% 83%;         /* #d4d4d4 */
+    --neutral-400: 0 0% 64%;         /* #a3a3a3 */
+    --neutral-500: 0 0% 45%;         /* #737373 */
+    --neutral-600: 0 0% 32%;         /* #525252 */
+    --neutral-700: 0 0% 25%;         /* #404040 */
+    --neutral-800: 0 0% 15%;         /* #262626 */
+    --neutral-900: 0 0% 9%;          /* #171717 */
     
     /* Functional Colors */
     --error: 0 84% 60%;              /* #dc2626 */
@@ -44,11 +44,11 @@
     --success: 160 84% 39%;          /* #059669 */
     --info: 199 89% 48%;             /* #0284c7 */
     
-    /* Service Category Colors - Themed */
-    --service-purple: 280 89% 60%;    /* #a855f7 */
-    --service-purple-light: 280 100% 97%; /* #faf5ff */
-    --service-pink: 330 81% 60%;      /* #ec4899 */
-    --service-pink-light: 330 100% 97%; /* #fdf2f8 */
+    /* Service Category Colors - Yellow/Black Themed */
+    --service-yellow: 48 100% 67%;    /* #fbbf24 */
+    --service-yellow-light: 48 100% 96%; /* #fffbeb */
+    --service-black: 0 0% 9%;         /* #171717 */
+    --service-black-light: 0 0% 96%;  /* #f5f5f5 */
     --service-blue: 217 91% 60%;      /* #3b82f6 */
     --service-blue-light: 217 100% 97%; /* #eff6ff */
     --service-green: 142 71% 45%;     /* #10b981 */
@@ -58,24 +58,24 @@
     
     /* Design System Tokens */
     --background: 0 0% 100%;         /* Pure white */
-    --foreground: 280 47% 13%;       /* Dark purple text */
+    --foreground: 0 0% 9%;           /* Dark black text */
     --card: 0 0% 100%;               /* White cards */
-    --card-foreground: 280 47% 13%;  /* Dark purple text on cards */
-    --border: 280 13% 94%;           /* Light purple borders */
-    --input: 280 13% 94%;            /* Input borders */
-    --ring: 280 89% 60%;             /* Purple focus rings */
-    --muted: 280 20% 99%;            /* Muted purple backgrounds */
-    --muted-foreground: 280 9% 49%;  /* Muted purple text */
-    --accent: 280 100% 97%;          /* Light purple accent */
-    --accent-foreground: 280 89% 60%; /* Purple accent text */
+    --card-foreground: 0 0% 9%;      /* Dark black text on cards */
+    --border: 0 0% 90%;              /* Light gray borders */
+    --input: 0 0% 90%;               /* Input borders */
+    --ring: 48 100% 67%;             /* Yellow focus rings */
+    --muted: 0 0% 98%;               /* Muted gray backgrounds */
+    --muted-foreground: 0 0% 45%;    /* Muted gray text */
+    --accent: 48 100% 96%;           /* Light yellow accent */
+    --accent-foreground: 48 100% 67%; /* Yellow accent text */
     
-    /* Shadows for depth with purple tint */
-    --shadow-sm: 0 1px 2px 0 hsl(280 20% 50% / 0.05);
-    --shadow-base: 0 1px 3px 0 hsl(280 20% 50% / 0.1), 0 1px 2px 0 hsl(280 20% 50% / 0.06);
-    --shadow-md: 0 4px 6px -1px hsl(280 20% 50% / 0.1), 0 2px 4px -1px hsl(280 20% 50% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(280 20% 50% / 0.1), 0 4px 6px -2px hsl(280 20% 50% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(280 20% 50% / 0.1), 0 10px 10px -5px hsl(280 20% 50% / 0.04);
-    --shadow-glow: 0 0 40px hsl(280 89% 60% / 0.15);
+    /* Shadows for depth with yellow tint */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-base: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
+    --shadow-glow: 0 0 40px hsl(48 100% 67% / 0.15);
     
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -161,13 +161,13 @@
   }
   
   /* Pet Care Service Specific Colors */
-  .hematology { @apply bg-service-pink-light text-service-pink; }
-  .biochemistry { @apply bg-service-purple-light text-service-purple; }
+  .hematology { @apply bg-service-yellow-light text-service-yellow; }
+  .biochemistry { @apply bg-service-black-light text-service-black; }
   .urine-clinical { @apply bg-service-green-light text-service-green; }
   .kit-based { @apply bg-service-orange-light text-service-orange; }
   .serology { @apply bg-service-blue-light text-service-blue; }
-  .cytology { @apply bg-service-pink-light text-service-pink; }
-  .microbiology { @apply bg-service-purple-light text-service-purple; }
+  .cytology { @apply bg-service-yellow-light text-service-yellow; }
+  .microbiology { @apply bg-service-black-light text-service-black; }
   .hormone { @apply bg-service-green-light text-service-green; }
   .xray { @apply bg-service-orange-light text-service-orange; }
   .pathology { @apply bg-service-blue-light text-service-blue; }
