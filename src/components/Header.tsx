@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock, Heart, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -50,22 +51,27 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+            <Link to="/" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
               Home
-            </a>
-            <a href="#services" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+            </Link>
+            <Link to="/services" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
               Services
-            </a>
-            <a href="#about" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+            </Link>
+            <Link to="/about" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
               About
-            </a>
-            <a href="#contact" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+            </Link>
+            <Link to="/contact" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
               Contact
-            </a>
-            <button className="btn-primary flex items-center space-x-2">
-              <Heart className="w-4 h-4" />
-              <span>Online Appointment</span>
-            </button>
+            </Link>
+            <Link to="/appointment" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+              Appointment
+            </Link>
+            <Link to="/products" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+              Products
+            </Link>
+            <Link to="/reports" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+              Reports
+            </Link>
           </nav>
         </div>
       </div>
