@@ -4,39 +4,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* PETLAB Pet Care Design System - Yellow/Black Theme */
+/* PETLAB Minimalistic Design System - Yellow/Black Theme */
 @layer base {
   :root {
-    /* Primary Yellow Theme */
-    --primary: 48 100% 67%;          /* #fbbf24 - Yellow */
-    --primary-dark: 45 93% 47%;      /* #d97706 - Darker Yellow */
-    --primary-light: 48 100% 96%;    /* #fffbeb - Light Yellow */
-    --primary-gradient: linear-gradient(135deg, #fbbf24, #f59e0b);
+    /* Primary Yellow Theme - Pure Colors */
+    --primary: 45 100% 50%;          /* #ffcc00 - Pure Yellow */
+    --primary-dark: 45 100% 25%;     /* #cc9900 - Dark Yellow */
+    --primary-light: 45 100% 95%;    /* #fffef5 - Very Light Yellow */
     
-    /* Secondary Black/Gray */
-    --secondary: 0 0% 9%;            /* #171717 - Near Black */
-    --secondary-dark: 0 0% 4%;       /* #0a0a0a - Darker Black */
-    --secondary-light: 0 0% 96%;     /* #f5f5f5 - Light Gray */
+    /* Secondary Black/White */
+    --secondary: 0 0% 0%;            /* #000000 - Pure Black */
+    --secondary-dark: 0 0% 0%;       /* #000000 - Pure Black */
+    --secondary-light: 0 0% 100%;    /* #ffffff - Pure White */
     
-    /* Accent Colors */
-    --accent-blue: 217 91% 60%;      /* #3b82f6 - Blue accent */
-    --accent-blue-light: 217 100% 97%; /* #eff6ff */
-    --accent-green: 142 71% 45%;     /* #10b981 - Green accent */
-    --accent-green-light: 142 76% 94%; /* #dcfce7 */
-    --accent-orange: 24 95% 53%;     /* #f97316 - Orange accent */
-    --accent-orange-light: 24 95% 93%; /* #fff7ed */
+    /* Minimal Accent Colors */
+    --accent: 0 0% 50%;              /* #808080 - Gray accent */
+    --accent-light: 0 0% 95%;        /* #f2f2f2 - Light Gray */
     
-    /* Neutral Grays - Black/Gray palette */
+    /* Minimal Neutral Palette */
     --neutral-50: 0 0% 98%;          /* #fafafa */
-    --neutral-100: 0 0% 96%;         /* #f5f5f5 */
-    --neutral-200: 0 0% 90%;         /* #e5e5e5 */
-    --neutral-300: 0 0% 83%;         /* #d4d4d4 */
-    --neutral-400: 0 0% 64%;         /* #a3a3a3 */
-    --neutral-500: 0 0% 45%;         /* #737373 */
-    --neutral-600: 0 0% 32%;         /* #525252 */
-    --neutral-700: 0 0% 25%;         /* #404040 */
-    --neutral-800: 0 0% 15%;         /* #262626 */
-    --neutral-900: 0 0% 9%;          /* #171717 */
+    --neutral-100: 0 0% 95%;         /* #f2f2f2 */
+    --neutral-200: 0 0% 85%;         /* #d9d9d9 */
+    --neutral-300: 0 0% 70%;         /* #b3b3b3 */
+    --neutral-400: 0 0% 50%;         /* #808080 */
+    --neutral-500: 0 0% 30%;         /* #4d4d4d */
+    --neutral-600: 0 0% 20%;         /* #333333 */
+    --neutral-700: 0 0% 10%;         /* #1a1a1a */
+    --neutral-800: 0 0% 5%;          /* #0d0d0d */
+    --neutral-900: 0 0% 0%;          /* #000000 */
     
     /* Functional Colors */
     --error: 0 84% 60%;              /* #dc2626 */
@@ -44,43 +39,36 @@
     --success: 160 84% 39%;          /* #059669 */
     --info: 199 89% 48%;             /* #0284c7 */
     
-    /* Service Category Colors - Yellow/Black Themed */
-    --service-yellow: 48 100% 67%;    /* #fbbf24 */
-    --service-yellow-light: 48 100% 96%; /* #fffbeb */
-    --service-black: 0 0% 9%;         /* #171717 */
-    --service-black-light: 0 0% 96%;  /* #f5f5f5 */
-    --service-blue: 217 91% 60%;      /* #3b82f6 */
-    --service-blue-light: 217 100% 97%; /* #eff6ff */
-    --service-green: 142 71% 45%;     /* #10b981 */
-    --service-green-light: 142 76% 94%; /* #dcfce7 */
-    --service-orange: 24 95% 53%;     /* #f97316 */
-    --service-orange-light: 24 95% 93%; /* #fff7ed */
+    /* Service Category Colors - Minimal Yellow/Black */
+    --service-yellow: 45 100% 50%;    /* #ffcc00 */
+    --service-yellow-light: 45 100% 95%; /* #fffef5 */
+    --service-black: 0 0% 0%;         /* #000000 */
+    --service-black-light: 0 0% 95%;  /* #f2f2f2 */
     
-    /* Design System Tokens */
+    /* Minimal Design System Tokens */
     --background: 0 0% 100%;         /* Pure white */
-    --foreground: 0 0% 9%;           /* Dark black text */
+    --foreground: 0 0% 0%;           /* Pure black text */
     --card: 0 0% 100%;               /* White cards */
-    --card-foreground: 0 0% 9%;      /* Dark black text on cards */
-    --border: 0 0% 90%;              /* Light gray borders */
-    --input: 0 0% 90%;               /* Input borders */
-    --ring: 48 100% 67%;             /* Yellow focus rings */
-    --muted: 0 0% 98%;               /* Muted gray backgrounds */
-    --muted-foreground: 0 0% 45%;    /* Muted gray text */
-    --accent: 48 100% 96%;           /* Light yellow accent */
-    --accent-foreground: 48 100% 67%; /* Yellow accent text */
+    --card-foreground: 0 0% 0%;      /* Pure black text on cards */
+    --border: 0 0% 85%;              /* Light gray borders */
+    --input: 0 0% 85%;               /* Input borders */
+    --ring: 45 100% 50%;             /* Yellow focus rings */
+    --muted: 0 0% 95%;               /* Light gray backgrounds */
+    --muted-foreground: 0 0% 50%;    /* Gray text */
+    --accent: 45 100% 95%;           /* Light yellow accent */
+    --accent-foreground: 0 0% 0%;    /* Black accent text */
     
-    /* Shadows for depth with yellow tint */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-base: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 10px 10px -5px hsl(0 0% 0% / 0.04);
-    --shadow-glow: 0 0 40px hsl(48 100% 67% / 0.15);
+    /* Minimal Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
+    --shadow-base: 0 1px 3px 0 hsl(0 0% 0% / 0.15);
+    --shadow-md: 0 2px 4px 0 hsl(0 0% 0% / 0.15);
+    --shadow-lg: 0 4px 8px 0 hsl(0 0% 0% / 0.15);
+    --shadow-xl: 0 8px 16px 0 hsl(0 0% 0% / 0.15);
     
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     
-    --radius: 1rem;  /* More rounded corners */
+    --radius: 0.25rem;  /* Minimal rounded corners */
   }
 
   .dark {
@@ -133,108 +121,52 @@
 }
 
 @layer components {
-  /* Pet Care Service Card Styles */
+  /* Minimal Service Card Styles */
   .service-card {
-    @apply bg-card border border-border rounded-2xl p-8 transition-all duration-300 ease-in-out relative overflow-hidden;
-    box-shadow: var(--shadow-md);
-  }
-  
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, hsl(var(--primary) / 0.02), hsl(var(--secondary) / 0.02));
-    pointer-events: none;
+    @apply bg-card border border-border rounded p-6 transition-all duration-200 ease-in-out;
+    box-shadow: var(--shadow-sm);
   }
   
   .service-card:hover {
-    @apply -translate-y-2 border-primary/30;
-    box-shadow: var(--shadow-xl), var(--shadow-glow);
+    @apply border-primary;
+    box-shadow: var(--shadow-base);
   }
   
   .service-icon {
-    @apply w-20 h-20 rounded-2xl flex items-center justify-center mb-6 relative z-10;
-    box-shadow: var(--shadow-base);
+    @apply w-12 h-12 rounded flex items-center justify-center mb-4;
   }
   
-  /* Pet Care Service Specific Colors */
-  .hematology { @apply bg-service-yellow-light text-service-yellow; }
-  .biochemistry { @apply bg-service-black-light text-service-black; }
-  .urine-clinical { @apply bg-service-green-light text-service-green; }
-  .kit-based { @apply bg-service-orange-light text-service-orange; }
-  .serology { @apply bg-service-blue-light text-service-blue; }
-  .cytology { @apply bg-service-yellow-light text-service-yellow; }
-  .microbiology { @apply bg-service-black-light text-service-black; }
-  .hormone { @apply bg-service-green-light text-service-green; }
-  .xray { @apply bg-service-orange-light text-service-orange; }
-  .pathology { @apply bg-service-blue-light text-service-blue; }
+  /* Minimal Service Colors */
+  .hematology { @apply bg-primary text-secondary; }
+  .biochemistry { @apply bg-secondary text-primary; }
+  .urine-clinical { @apply bg-primary text-secondary; }
+  .kit-based { @apply bg-secondary text-primary; }
+  .serology { @apply bg-primary text-secondary; }
+  .cytology { @apply bg-secondary text-primary; }
+  .microbiology { @apply bg-primary text-secondary; }
+  .hormone { @apply bg-secondary text-primary; }
+  .xray { @apply bg-primary text-secondary; }
+  .pathology { @apply bg-secondary text-primary; }
   
-  /* Pet Care Button Styles */
+  /* Minimal Button Styles */
   .btn-primary {
-    @apply bg-primary text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 relative overflow-hidden;
-    background: var(--primary-gradient);
-    box-shadow: var(--shadow-base);
-  }
-  
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s ease;
-  }
-  
-  .btn-primary:hover::before {
-    left: 100%;
+    @apply bg-primary text-secondary px-6 py-3 rounded font-medium transition-all duration-200;
   }
   
   .btn-primary:hover {
-    @apply -translate-y-1;
-    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    @apply bg-primary-dark;
   }
   
   .btn-secondary {
-    @apply bg-white text-neutral-700 border-2 border-primary/20 px-8 py-4 rounded-2xl font-semibold transition-all duration-300;
+    @apply bg-secondary text-primary border border-primary px-6 py-3 rounded font-medium transition-all duration-200;
   }
   
   .btn-secondary:hover {
-    @apply bg-primary/5 border-primary/30 -translate-y-0.5;
+    @apply bg-primary text-secondary;
   }
   
-  /* Pet Care Header */
-  .header-gradient {
-    background: var(--primary-gradient);
-  }
-  
-  /* Decorative Elements */
-  .pet-frame {
-    @apply relative rounded-3xl overflow-hidden;
-    box-shadow: var(--shadow-lg);
-  }
-  
-  .pet-frame::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border: 3px solid hsl(var(--primary) / 0.2);
-    border-radius: inherit;
-    pointer-events: none;
-  }
-  
-  .sparkle {
-    @apply absolute animate-pulse;
-    color: hsl(var(--primary));
-  }
-  
-  .connecting-line {
-    @apply absolute;
-    background: linear-gradient(90deg, hsl(var(--primary) / 0.3), hsl(var(--secondary) / 0.3));
-    height: 2px;
+  /* Minimal Header */
+  .header-clean {
+    @apply bg-white border-b border-border;
   }
 }
