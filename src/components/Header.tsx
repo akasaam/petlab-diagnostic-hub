@@ -1,12 +1,12 @@
-import { Phone, MapPin, Clock, Heart, Star } from "lucide-react";
+import { Phone, MapPin, Heart, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-white border-b border-neutral-200 shadow-soft relative overflow-hidden">
+    <header className="bg-white border-b border-border shadow-lg relative overflow-hidden">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-      <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-secondary/10 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+      <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-full -translate-y-8 translate-x-8"></div>
+      <div className="absolute bottom-0 left-0 w-12 h-12 bg-primary/5 rounded-full translate-y-6 -translate-x-6"></div>
       
       {/* Top Info Bar */}
       <div className="header-gradient text-white py-3 relative">
@@ -36,41 +36,35 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-4">
               <div className="relative">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-2xl">P</span>
+                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center shadow-lg">
+                  <span className="text-secondary font-bold text-2xl">P</span>
                 </div>
-                <Star className="absolute -top-1 -right-1 w-4 h-4 text-secondary animate-pulse" />
+                <Star className="absolute -top-1 -right-1 w-4 h-4 text-primary animate-pulse" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <h1 className="text-3xl font-bold text-primary">
                   PETLAB
                 </h1>
-                <p className="text-sm text-neutral-600 font-medium">Find Your Best Pet Care Center</p>
+                <p className="text-sm text-muted-foreground font-medium">Find Your Best Pet Care Center</p>
               </div>
             </div>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+          <nav className="hidden md:flex items-center space-x-2">
+            <Link to="/" className="px-4 py-2 text-muted-foreground hover:text-primary hover:bg-primary/5 font-semibold transition-all duration-300 rounded-lg">
               Home
             </Link>
-            <Link to="/services" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+            <Link to="/services" className="px-4 py-2 text-muted-foreground hover:text-primary hover:bg-primary/5 font-semibold transition-all duration-300 rounded-lg">
               Services
             </Link>
-            <Link to="/about" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+            <Link to="/about" className="px-4 py-2 text-muted-foreground hover:text-primary hover:bg-primary/5 font-semibold transition-all duration-300 rounded-lg">
               About
             </Link>
-            <Link to="/contact" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
+            <Link to="/contact" className="px-4 py-2 text-muted-foreground hover:text-primary hover:bg-primary/5 font-semibold transition-all duration-300 rounded-lg">
               Contact
             </Link>
-            <Link to="/appointment" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
-              Appointment
-            </Link>
-            <Link to="/products" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
-              Products
-            </Link>
-            <Link to="/reports" className="text-neutral-600 hover:text-primary font-semibold transition-all duration-300 hover:scale-105">
-              Reports
+            <Link to="/appointment" className="btn-primary ml-4">
+              Book Appointment
             </Link>
           </nav>
         </div>

@@ -121,22 +121,40 @@
 }
 
 @layer components {
-  /* Minimal Service Card Styles */
+  /* Enhanced Service Card Styles */
   .service-card {
-    @apply bg-card border border-border rounded p-6 transition-all duration-200 ease-in-out;
-    box-shadow: var(--shadow-sm);
+    @apply bg-card border border-border rounded-2xl p-8 transition-all duration-300 ease-in-out relative overflow-hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
   
   .service-card:hover {
     @apply border-primary;
-    box-shadow: var(--shadow-base);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: hsl(var(--primary));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover::before {
+    transform: scaleX(1);
   }
   
   .service-icon {
-    @apply w-12 h-12 rounded flex items-center justify-center mb-4;
+    @apply w-16 h-16 rounded-xl flex items-center justify-center mb-6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  /* Minimal Service Colors */
+  /* Enhanced Service Colors */
   .hematology { @apply bg-primary text-secondary; }
   .biochemistry { @apply bg-secondary text-primary; }
   .urine-clinical { @apply bg-primary text-secondary; }
@@ -148,25 +166,48 @@
   .xray { @apply bg-primary text-secondary; }
   .pathology { @apply bg-secondary text-primary; }
   
-  /* Minimal Button Styles */
+  /* Enhanced Button Styles */
   .btn-primary {
-    @apply bg-primary text-secondary px-6 py-3 rounded font-medium transition-all duration-200;
+    @apply bg-primary text-secondary px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer inline-flex items-center justify-center text-center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    text-decoration: none;
   }
   
   .btn-primary:hover {
     @apply bg-primary-dark;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
   }
   
   .btn-secondary {
-    @apply bg-secondary text-primary border border-primary px-6 py-3 rounded font-medium transition-all duration-200;
+    @apply bg-transparent text-primary border-2 border-primary px-8 py-4 rounded-xl font-semibold transition-all duration-300 cursor-pointer inline-flex items-center justify-center text-center;
+    text-decoration: none;
   }
   
   .btn-secondary:hover {
     @apply bg-primary text-secondary;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
   
-  /* Minimal Header */
-  .header-clean {
-    @apply bg-white border-b border-border;
+  /* Enhanced Pet Frame */
+  .pet-frame {
+    @apply rounded-2xl border border-border transition-all duration-300 relative overflow-hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pet-frame:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Header styles */
+  .header-gradient {
+    background: hsl(var(--primary));
+  }
+  
+  .stats-card {
+    @apply bg-white/95 backdrop-blur-sm rounded-2xl border border-border p-6;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   }
 }
